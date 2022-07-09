@@ -1,0 +1,33 @@
+User persona
+
+User 
+Vishal Patel 24, Years, male.
+
+I like traveling very much.
+
+Personal details:
+He lives in Varanasi Utter Pradesh and single child with his parents. 
+His parents are well educated.
+He has a lot of friends in school and college. 
+ He has done B.Tech from MJPRU Bareilly.
+
+Professional information:
+He is a software engineer.
+His salary is 25000 per month.
+He has done B.Tech.
+He knows Hindi and English.
+
+User environment:
+He uses mobile, web applications and social media apps.
+
+Psychic nature:
+He tries new apps very often.
+He like music and dancing very much.
+Service expectations are very high.
+
+End goal:
+
+I want an application that is easy to use and also compatible with me. This particular service will be promisive and effective.
+
+
+

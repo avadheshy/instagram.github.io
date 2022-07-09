@@ -1,0 +1,35 @@
+CREATE DATABASE insta;
+CREATE TABLE user{
+    id=int(),
+    first_name=Varchar(50),
+    last_name=Varchar(50),
+    mobile=int(),
+    email=Varchar(50),
+    age=int(),
+    gender=Varchar(10),
+}
+CREATE TABLE comment{
+    user_id=int(foreignkey,db_colomn=id),
+    comment=Varchar(200),
+}
+ CREATE TABLE photo{
+    photo_id = int(primarykey),
+    photoPath=Varchar,
+    date=date,
+    time=time,
+ }
+ CREATE TABLE video{
+    video_id = int(primarykey),
+    videoPath=Varchar,
+    date=date,
+    time=time,
+ }
+  CREATE TABLE follow{
+    id = int(primarykey),
+    person_id=int(foreignkey)
+ }
+  CREATE TABLE following{
+    id = int(primarykey),
+    person_id=int(foreignkey)
+ }
+
