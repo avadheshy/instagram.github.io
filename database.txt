@@ -1,35 +1,30 @@
 CREATE DATABASE insta;
-CREATE TABLE user{
-    id=int(),
-    first_name=Varchar(50),
-    last_name=Varchar(50),
-    mobile=int(),
-    email=Varchar(50),
-    age=int(),
-    gender=Varchar(10),
-}
-CREATE TABLE comment{
-    user_id=int(foreignkey,db_colomn=id),
-    comment=Varchar(200),
-}
- CREATE TABLE photo{
-    photo_id = int(primarykey),
-    photoPath=Varchar,
-    date=date,
-    time=time,
- }
- CREATE TABLE video{
-    video_id = int(primarykey),
-    videoPath=Varchar,
-    date=date,
-    time=time,
- }
-  CREATE TABLE follow{
-    id = int(primarykey),
-    person_id=int(foreignkey)
- }
-  CREATE TABLE following{
-    id = int(primarykey),
-    person_id=int(foreignkey)
- }
+CREATE TABLE user(
+    id int NOT NULL,
+    first_name Varchar(50),
+    last_name Varchar(50),
+    mobile int,
+    email Varchar(50),
+    age int,
+    gender Varchar(10),
+    bio Varchar(200),
+    profile_pic img,
+    followers_count int,
+    following_count int, 
+    PRIMARY KEY(emp_id),
+);
+CREATE TABLE post(
+    user_id int,
+    post_id int,
+    image img(),
+    video video(),
+    comment Varchar(200),
+    date date(),
+    time time(),
+    like int(),
+    PRIMARY KEY(post_id),
+    FOREIGN KEY(post_id) REFERENCES user(id),
+);
+ 
+
 
