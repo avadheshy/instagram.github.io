@@ -26,7 +26,7 @@ Service expectations are very high.
 
 End goal:
 
-I want an application that is easy to use and also compatible with me. 
+He wants an application that is easy to use and also compatible with me. 
 This particular service will be promising and effective.
 
 
@@ -58,7 +58,7 @@ Service expectations are very high.
 
 End goal:
 
-I want an application that is easy to use and also compatible with me. 
+He wants an application that is easy to use and also compatible with me. 
 This particular service will be promising and effective.
 
 

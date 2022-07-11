@@ -1,20 +1,24 @@
-body{
-    background-color:white;
+body {
+    background-color: white;
 }
-.conainer-main{
+
+.conainer-main {
     display: grid;
     grid-template-columns: auto auto;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 
 }
-.conatiner-sign-up{
+
+.conatiner-sign-up {
     border: 1px solid black;
 }
-.container-or{
+
+.container-or {
     display: grid;
     grid-template-columns: aut auto auto;
 }
-.conatine-store{
+
+.conatine-store {
     display: flex;
 }
