@@ -1,12 +1,59 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My instagram</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/insta.png' %}" type="image/x-icon">
+    <title>Instagram</title>
 </head>
+
 <body>
-    <h1>Hello word</h1>
+    <div class="conainer-main">
+        <div class="conatiner-img">
+            <img src="{% static 'images/instagrampicture1.png' %}" alt="">
+        </div>
+        <div class="container-login-main">
+            <div class="conatiner-login-section">
+
+                <div>
+                    <h1>Instagram</h1>
+                </div>
+                <div>
+                    <form action="">
+                        <input type="text" name="input" placeholder="Phone number, email, or user name"><br> <br>
+                        <input type="password" name="password" part="Password"> <br> <br>
+                        <input type="submit" placeholder="login" name="login"> <br> <br>
+                    </form>
+                </div>
+                <div class="container-or">
+                    <div>
+                        <hr>
+                    </div>
+                    <div>OR</div>
+                    <div>
+                        <hr>
+                    </div>
+                </div>
+                <div>
+                    <a href="http://">-Forgot password ?</a>
+                </div>
+            </div>
+            <div class="conatiner-sign-up">
+                <p>Don't have an account? <a href="http://">Sign up</a></p>
+            </div>
+            <div class="container-get-app">
+                <p>Get the app.</p>
+                <img src="{% static 'images/store.jpeg' %}" alt="">
+                
+            </div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>

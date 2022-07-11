@@ -1,0 +1,20 @@
+body{
+    background-color:white;
+}
+.conainer-main{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content:center;
+    align-items: center;
+
+}
+.conatiner-sign-up{
+    border: 1px solid black;
+}
+.container-or{
+    display: grid;
+    grid-template-columns: aut auto auto;
+}
+.conatine-store{
+    display: flex;
+}
