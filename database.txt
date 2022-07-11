@@ -1,5 +1,5 @@
 CREATE DATABASE insta;
-CREATE TABLE user(
+CREATE TABLE User(
     id int NOT NULL,
     first_name Varchar(50),
     last_name Varchar(50),
@@ -11,20 +11,46 @@ CREATE TABLE user(
     profile_pic img,
     followers_count int,
     following_count int, 
-    PRIMARY KEY(emp_id),
+    PRIMARY KEY(id),
 );
-CREATE TABLE post(
+CREATE TABLE Post(
     user_id int,
     post_id int,
-    image img(),
-    video video(),
-    comment Varchar(200),
-    date date(),
-    time time(),
-    like int(),
-    PRIMARY KEY(post_id),
-    FOREIGN KEY(post_id) REFERENCES user(id),
+    post_imp img,
+    post_vdo video,
+    total_likes=int,
+    FOREIGN KEY(post_id) REFERENCES User(id),
 );
+CREATE TABLE Follower(
+    user_id int,
+    follower_id int,
+    created_at date,
+    updated_at date,
+    FOREIGN KEY(user_id) REFERENCES User(id),
+    FOREIGN KEY(follower_id) REFERENCES User(id),
+
+);
+CREATE TABLE Comment(
+    post_id int,
+    user_id int,
+    created_at date,
+    updated_at date,
+    comment Varchar(200),
+    FOREIGN KEY(user_id) REFERENCES User(id),
+    FOREIGN KEY(post_id) REFERENCES Post(id),
+
+);
+CREATE TABLE Like(
+    post_id int,
+    user_id int,
+    created_at date,
+    updated_at date,
+    like_count int,
+    FOREIGN KEY(user_id) REFERENCES User(id),
+    FOREIGN KEY(post_id) REFERENCES Post(id),
+);
+
+
  
 
 
