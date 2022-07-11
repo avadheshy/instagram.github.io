@@ -30,25 +30,18 @@ CREATE TABLE Follower(
     FOREIGN KEY(follower_id) REFERENCES User(id),
 
 );
-CREATE TABLE Comment(
-    post_id int,
-    user_id int,
-    created_at date,
-    updated_at date,
-    comment Varchar(200),
-    FOREIGN KEY(user_id) REFERENCES User(id),
-    FOREIGN KEY(post_id) REFERENCES Post(id),
-
-);
-CREATE TABLE Like(
+CREATE TABLE Reaction(
     post_id int,
     user_id int,
     created_at date,
     updated_at date,
     like_count int,
+    comment Varchar(200),
     FOREIGN KEY(user_id) REFERENCES User(id),
     FOREIGN KEY(post_id) REFERENCES Post(id),
+
 );
+
 
 
  
