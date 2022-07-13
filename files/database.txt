@@ -1,14 +1,10 @@
 CREATE DATABASE instagram;
 CREATE TABLE User(
     id int,
-    first_name Varchar(50),
+    user_data Varchar(50),
     last_name Varchar(50),
-    mobile Varchar(10),
-    email Varchar(50),
-    age int,
-    gender Varchar(10),
-    bio Varchar(200),
-    profile_pic img,
+    user_name Varchar(10),
+    password Varchar(50),
     PRIMARY KEY(id),
 );
 CREATE TABLE Post(

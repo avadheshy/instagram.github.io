@@ -13,29 +13,30 @@
 
 <body>
     <section class="wraper">
-        <div class="left">
-            <img src="{% static 'images/instagram.png'%}" alt="phone">
-        </div>
         <div class="right">
             <div class="panel login">
                 <img id="logo" src="{% static 'images/insta.png' %}" alt="logo">
+                <a class="fb" href="#">Login with facebook</a>
+                <div class="divider">
+                    <div class="line"></div>
+                    <p>OR</p>
+                    <div class="line down"></div>
+                </div>
+                
                 <form action="">
-                    <input class="input-box" type="text" name="username" required placeholder="Phone number, email or user name">
-                    <input class="input-box" type="password" name="password" required placeholder="Password">
-                    <input class="button" type="submit" name="login" value="Log in">
-                    <div class="divider">
-                        <div class="line"></div>
-                        <p>OR</p>
-                        <div class="line"></div>
-                    </div>
-                    <a class="fb" href="#">Login with facebook</a>
-                    <a class="forgot" href="#">Forgot password</a>
+                    <input class="input-box" type="text" name="user" required placeholder="mobile number, email">
+                    <input class="input-box" type="text" name="first_name" required placeholder="first name">
+                    <input class="input-box" type="text" name="username" placeholder="username" >
+                    <input class="input-box" type="password" name="password" placeholder="password">
+                    <input class="input-box" class="button" type="submit" name="signup" value="signup">
+                   
+    
                     
                 </form>
             </div>
             <div class="panel signup">
-                <p>Don't have account ?</p>
-                <a href="/register">Sign up</a>
+                <p>Have an account ?</p>
+                <a href="#">Log in</a>
             </div>
             <div class="apps">
                 <p>Get the app.</p>
