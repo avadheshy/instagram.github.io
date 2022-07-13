@@ -26,8 +26,9 @@ Service expectations are very high.
 
 End goal:
 
-He wants an application that is easy to use and also compatible with me. 
-This particular service will be promising and effective.
+He is a stroller and likes posting images and videos on instagram very much. 
+He wants an application that is easy to use and also compatible with him. 
+This instagram application  will be promising and effective for him.
 
 
 User persona2
@@ -57,9 +58,10 @@ He like music, singing and dancing very much.
 Service expectations are very high.
 
 End goal:
-
-He wants an application that is easy to use and also compatible with me. 
-This particular service will be promising and effective.
+He wants that there will be thousands of his followers on instagram,  
+for this he likes to post images and videos on instagram. 
+He wants an application that is easy to use and also compatible with him. 
+This instagram application will be promising and effective  for him.
 
 
 

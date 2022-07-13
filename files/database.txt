@@ -1,16 +1,14 @@
-CREATE DATABASE insta;
+CREATE DATABASE instagram;
 CREATE TABLE User(
-    id int NOT NULL,
+    id int,
     first_name Varchar(50),
     last_name Varchar(50),
-    mobile int,
+    mobile Varchar(10),
     email Varchar(50),
     age int,
     gender Varchar(10),
     bio Varchar(200),
     profile_pic img,
-    followers_count int,
-    following_count int, 
     PRIMARY KEY(id),
 );
 CREATE TABLE Post(
@@ -18,8 +16,9 @@ CREATE TABLE Post(
     post_id int,
     post_imp img,
     post_vdo video,
-    total_likes=int,
-    FOREIGN KEY(post_id) REFERENCES User(id),
+    last_name int,
+    PRIMARY KEY(post_id),
+    FOREIGN KEY(user_id) REFERENCES User(id),
 );
 CREATE TABLE Follower(
     user_id int,
@@ -30,13 +29,25 @@ CREATE TABLE Follower(
     FOREIGN KEY(follower_id) REFERENCES User(id),
 
 );
-CREATE TABLE Reaction(
+CREATE TABLE Like(
     post_id int,
     user_id int,
+    like_id int,
     created_at date,
     updated_at date,
-    like_count int,
+    PRIMARY KEY(like_id),
+    FOREIGN KEY(user_id) REFERENCES User(id),
+    FOREIGN KEY(post_id) REFERENCES Post(id),
+
+);
+CREATE TABLE Comment(
+    post_id int,
+    user_id int,
+    comment_id int,
+    created_at date,
+    updated_at date,
     comment Varchar(200),
+    PRIMARY KEY(comment_id),
     FOREIGN KEY(user_id) REFERENCES User(id),
     FOREIGN KEY(post_id) REFERENCES Post(id),
 
