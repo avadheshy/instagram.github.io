@@ -14,11 +14,11 @@ def login(request):
         password = request.POST['password']
         print('before login page')
         if person.objects.filter(user_data=user_data).exists():
-            print('login page')
             return render(request,'login.html',{'name':user_data})
         else:
-            print('home page')
             return redirect('/')
+    else:
+        return redirect('/')
 
 def register(request):
     if request.method == 'POST':
