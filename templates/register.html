@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
     <link rel="shortcut icon" href="{% static 'images/instaIcon.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/app/style.css' %} ">
 </head>
 
 <body>
@@ -23,10 +23,11 @@
                     <div class="line down"></div>
                 </div>
 
-                <form action="">
+                <form action="register" method="POST">
+                    {% csrf_token %}
                     <input class="input-box" type="text" name="user_data" required placeholder="mobile number, email">
                     <input class="input-box" type="text" name="first_name" required placeholder="first name">
-                    <input class="input-box" type="text" name="username" placeholder="username">
+                    <input class="input-box" type="text" name="last_name" placeholder="username">
                     <input class="input-box" type="password" name="password" placeholder="password">
                     <input class="input-box" class="button" type="submit" name="signup" value="signup">
 
@@ -36,7 +37,7 @@
             </div>
             <div class="panel signup">
                 <p>Have an account ?</p>
-                <a href="#">Log in</a>
+                <a href="login">Log in</a>
             </div>
             <div class="apps">
                 <p>Get the app.</p>

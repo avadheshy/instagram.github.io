@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
     <link rel="shortcut icon" href="{% static 'images/instaIcon.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/app/style.css' %} ">
 </head>
 
 <body>
@@ -19,7 +19,8 @@
         <div class="right">
             <div class="panel login">
                 <img id="logo" src="{% static 'images/insta.png' %}" alt="logo">
-                <form action="">
+                <form action="login" method="POST">
+                    {% csrf_token %}
                     <input class="input-box" type="text" name="username" required
                         placeholder="Phone number, email or user name">
                     <input class="input-box" type="password" name="password" required placeholder="Password">
