@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from email.policy import default
 from pathlib import Path
 import os
 from decouple import config
@@ -26,9 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#ALLOWED_HOSTS=[]
-ALLOWED_HOSTS=['avadhesh-instagram.herokuapp.com']
+DEBUG = config('DEBUG', cast=bool)
+ALLOWED_HOSTS=[]
+#ALLOWED_HOSTS=['avadhesh-instagram.herokuapp.com']
+#ALLOWED_HOSTS=[config('ALLOWED_HOSTS')]
 # Application definition
 
 INSTALLED_APPS = [
@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'insta.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'insta',
-        'USER': 'postgres',
-        'PASSWORD':'1234',
-        'HOST': 'localhost',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD':config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
         'PORT': '5432',
     }
 }
