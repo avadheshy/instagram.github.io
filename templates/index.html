@@ -7,18 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
-    <link rel="shortcut icon" href="{% static 'images/instaIcon.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/instaIcon.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/app/style.css' %} ">
 </head>
 
 <body>
     <section class="wraper">
         <div class="left">
-            <img src="{% static 'images/instagram.png'%}" alt="phone">
+            <img src="{% static 'img/instagram11.png'%}" alt="phone">
         </div>
         <div class="right">
             <div class="panel login">
-                <img id="logo" src="{% static 'images/insta.png' %}" alt="logo">
+                <img id="logo" src="{% static 'img/insta.png' %}" alt="logo">
                 <form action="login" method="POST">
                     {% csrf_token %}
                     <input class="input-box" type="text" name="username" required
@@ -42,8 +42,8 @@
             <div class="apps">
                 <p>Get the app.</p>
                 <div class="app-store">
-                    <img src="{% static 'images/apple.png'%}" alt="apple store">
-                    <img src="{% static 'images/google.png'%}" alt="play store">
+                    <img src="{% static 'img/apple.png'%}" alt="apple store">
+                    <img src="{% static 'img/google.png'%}" alt="play store">
                 </div>
             </div>
         </div>

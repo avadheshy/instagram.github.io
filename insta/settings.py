@@ -26,9 +26,9 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
-#ALLOWED_HOSTS=[]
+ALLOWED_HOSTS=[]
 #ALLOWED_HOSTS=['avadhesh-instagram.herokuapp.com']
-ALLOWED_HOSTS=[config('ALLOWED_HOSTS')]
+#ALLOWED_HOSTS=[config('ALLOWED_HOSTS')]
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'core'
 
 ]
 
@@ -131,8 +132,10 @@ STATICFILES_DIRS = [
 
 ]
 STATIC_ROOT  =  os.path.join(BASE_DIR, 'assets')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+MEDIA_URL= '/media/'
+MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#AUTH_USER_MODEL = 'user.User'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
